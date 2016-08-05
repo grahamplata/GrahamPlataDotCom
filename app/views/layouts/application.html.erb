@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Graham Plata</title>
+  <meta name="description" content="">
+  <meta name="author" content="Graham Plata">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="javascripts/application.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="images/png" href="images/favicon.png">
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="container">
+    <!-- Bits and Pieces -->
+    <%= render 'partials/header' %>
+    <%= render 'partials/navigation' %>
+    <!-- Intro -->
+    <%= render 'partials/intro' %>
+    <!-- blog -->
+    <%= render 'partials/blog' %>
+    <!-- Projects -->
+    <%= render 'partials/projects' %>
+    <!-- Portfolio -->
+    <%= render 'partials/portfolio' %>
+    <!-- Forms -->
+    <%= render 'partials/contact' %>
+    <!-- Footers -->
+    <%= render 'partials/footer' %>
+  </div>
+
+
+</body>
+</html>
