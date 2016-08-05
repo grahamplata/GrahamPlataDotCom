@@ -1,6 +1,12 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+
 .container {
   max-width: 800px; }
 .header {
