@@ -4,9 +4,8 @@
 <!-- Content -->
 
   <%= @posts.each do |post| %>
-    <h6 class="docs-header"><a href=""><%= post.title, post %></a></h6>
-    <p><%= post.created_at.strftime("%A, %b %d") %></p>
-    <hr>
+    <%= post.title, post %>
+    <%= post.created_at.strftime("%A, %b %d") %>
   <% end %>
 
 <!-- Footers -->
