@@ -2,12 +2,11 @@
   <h4>Blog</h4>
   <h6>I am still buidling out the backend of my website so I am currently lacking the blog functionality. Enjoy the hint of what is to come.</h6>
   <hr>
-  <h6 class="docs-header">What's in my everyday carry?</h6>
-    <p><em>Pork belly slow-carb viral, pug mixtape man bun trust fund blog salvia vegan occupy you probably haven't heard of them listicle jean shorts. Beard wayfarers craft beer yuccie. Cornhole swag four loko, pickled bushwick cliche next level retro green juice cold-pressed man bun. Kitsch neutra selvage heirloom schlitz butcher venmo helvetica. Distillery semiotics vinyl flexitarian, brunch squid sustainable. Fixie PBR&B chartreuse, flannel direct trade selvage pour-over you probably haven't heard of them. Neutra aesthetic dreamcatcher food truck yr chambray etsy, next level twee gluten-free godard cronut whatever DIY.</em></p>
-    <a class="button button-primary" href="#">Read</a>
-  <hr>
-  <h6 class="docs-header">Video Storage Case Study</h6>
-    <p><em>Biodiesel deep, taxidermy ennui irony wolf neutra gentrify salvia four loko blog art party vice scenester. Tofu cred health goth master cleanse cliche locavore. Hoodie deep v swag kale chips, lumbersexual organic kinfolk meh mixtape williamsburg raw denim. Celiac pitchfork neutra sustainable asymmetrical kinfolk hammock, gentrify forage twee raw denim. Wolf yr salvia mustache ramps tacos farm-to-table, scenester tote bag kogi microdosing echo park paleo gochujang tattooed. Dreamcatcher tousled viral, food truck ethical disrupt tilde. Wayfarers salvia asymmetrical you probably haven't heard of them.</p>
-    <a class="button button-primary" href="#">Read</a>
-  <hr>
+
+  <%= @posts.each do |post| %>
+    <h6 class="docs-header"><%= link_to post.title, post %></h6>
+    <p><%= post.created_at.strftime("%A, %b %d") %></p>
+    <hr>
+  <% end %>
+
 </div>

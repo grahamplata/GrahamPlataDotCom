@@ -1,8 +1,20 @@
-<%= @post.title %> <br>
+<!-- Bits and Pieces -->
+<%= render 'partials/header' %>
+<%= render 'partials/specialnav' %>
+<!-- Content -->
+
+<br>
+
+
+<h4 class="docs-header"><%= @post.title %></h4> <br>
+<p><%= link_to "Edit", edit_post_path(@post) %> |
+<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure you wish to delete this post?"} %></p>
+
+<br>
+<br>
 <%= @post.content %>
-
 <br>
 <br>
 
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure you wish to delete this post?"} %>
+<!-- Footers -->
+<%= render 'partials/footer' %>
