@@ -20,8 +20,11 @@ $(document).ready(function() {
   function init() {
     $window.on('scroll', onScroll)
     $window.on('resize', resize)
+    $popoverLink.on('click', openPopover)
+    $document.on('click', closePopover)
+    $('a[href^="#"]').on('click', smoothScroll)
+    buildSnippets();
   }
-
 
   function smoothScroll(e) {
     e.preventDefault();
@@ -30,13 +33,32 @@ $(document).ready(function() {
         menu = target;
     $target = $(target);
     $('html, body').stop().animate({
-        'scrollTop': $target.offset().top-50
+        'scrollTop': $target.offset().top-60
     }, 0, 'swing', function () {
         window.location.hash = target;
         $(document).on("scroll", onScroll);
     });
   }
 
+  function openPopover(e) {
+    e.preventDefault()
+    closePopover();
+    var popover = $($(this).data('popover'));
+    popover.toggleClass('open')
+    e.stopImmediatePropagation();
+  }
+
+  function closePopover(e) {
+    if($('.popover.open').length > 0) {
+      $('.popover').removeClass('open')
+    }
+  }
+
+  $("#button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#elementtoScrollToID").offset().top
+    }, 2000);
+});
 
   function resize() {
     $body.removeClass('has-docked-nav')
@@ -53,15 +75,20 @@ $(document).ready(function() {
     }
   }
 
+  function escapeHtml(string) {
+    return String(string).replace(/[&<>"'\/]/g, function (s) {
+      return entityMap[s];
+    });
+  }
+
+  function buildSnippets() {
+    $codeSnippets.each(function() {
+      var newContent = escapeHtml($(this).html())
+      $(this).html(newContent)
+    })
+  }
+
 
   init();
 
-});
-
-$(document).on('click', 'a', function(event){
-event.preventDefault();
-
-$('html, body').animate({
-    scrollTop: $( $.attr(this, 'href') ).offset().top
-}, 500);
 });
