@@ -12,7 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-rails'
 gem 'font-awesome-sass'
 gem 'redcarpet', '~> 3.2.2'
-# gem 'friendly_id', '~> 5.1'
+gem 'friendly_id', '~> 5.1.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :production do
