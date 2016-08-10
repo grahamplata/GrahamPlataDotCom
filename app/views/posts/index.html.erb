@@ -2,11 +2,17 @@
 <%= render 'partials/header' %>
 <%= render 'partials/specialnav' %>
 <!-- Content -->
+<br>
+<h4>Blog</h4>
+<h6>I am still buidling out the backend of my website so I am currently lacking the blog functionality. Enjoy the hint of what is to come.</h6>
 
-  <%= @posts.each do |post| %>
-    <%= post.title, post %>
-    <%= post.created_at.strftime("%A, %b %d") %>
-  <% end %>
+<br>
+<%= @posts.each do |post| %>
+  <h6 class="docs-header"><%= link_to post.title, post %></h6>
+  <p><%= post.created_at.strftime("%A, %b %d") %></p>
+  <hr>
+<% end %>
 
 <!-- Footers -->
+<hr>
 <%= render 'partials/footer' %>
