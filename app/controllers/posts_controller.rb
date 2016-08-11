@@ -10,17 +10,16 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new post_params
+		@post = Post.new post_params
 
-    if @post.save
-      redirect_to @post, notice: "Post Created and saved"
-    else
-      render 'new', notice: "Post was not created"
-    end
-  end
+		if @post.save
+			redirect_to @post, notice: "Your post was successfully saved!"
+		else
+			render 'new', notice: "Unable to save your post."
+		end
+	end
 
   def show
-
   end
 
   def edit
