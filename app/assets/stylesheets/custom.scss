@@ -13,6 +13,7 @@ textarea {
   resize: vertical;
 }
 
+
 .container {
   max-width: 800px; }
 .header {
@@ -210,4 +211,8 @@ textarea {
 			background: #fff;
 		}
 	}
+}
+
+.hidden {
+  display: none;
 }

@@ -1,0 +1,30 @@
+<div class="docs-section" id="contact">
+  <h4>Contact</h4>
+  <p>Want to work with me? Build something cool? Break something? Lets push some boundries together!</p>
+  <hr>
+  <div class="docs-example docs-example-forms">
+    <div class="row">
+        <div class="six columns">
+          <%= form_for @contact do |f| %>
+            <%= f.label :name %><br>
+            <%= f.text_field :name, required: true, class: "u-full-width" %>
+            <br>
+        </div>
+        <div class="six columns">
+          <%= f.label :email %><br>
+          <%= f.text_field :email, required: true, class: "u-full-width", placeholder: "name@company.com" %>
+          <br>
+        </div>
+      </div>
+      <div class="row">
+      <%= f.label :message %><br>
+      <%= f.text_area :message, required: true, placeholder: "Enter your rad idea!" %>
+      <div class="hidden">
+        <%= f.label :nickname %><br>
+        <%= f.text_field :nickname, hint: "leave this blank" %>
+      </div>
+        <%= f.submit "Submit", class: "button-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
