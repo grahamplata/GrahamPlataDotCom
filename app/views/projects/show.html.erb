@@ -4,6 +4,10 @@
 <!-- Content -->
 
 <br>
+<h4 class="docs-header"><%= @project.title %></h4> <br>
+<p><%= link_to "Edit", edit_project_path(@project) %> |
+<%= link_to "Delete", project_path(@project), method: :delete, data: {confirm: "Are you sure you wish to delete this post?"} %></p>
+
 <%= @project.description %>
 <br>
 
