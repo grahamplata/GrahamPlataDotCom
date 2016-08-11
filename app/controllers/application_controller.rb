@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   def home
     @posts = Post.all.limit(3).order("created_at desc")
+    @projects = Project.all.limit(2).order("created_at desc")
   end
   protect_from_forgery with: :exception
 end

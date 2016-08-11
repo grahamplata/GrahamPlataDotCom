@@ -7,7 +7,7 @@ $(document).ready(function() {
       $window = $(window),
       $popoverLink = $('[data-popover]'),
       navOffsetTop = $nav.offset().top,
-      $document = $(document),
+      $document = $(document)
       entityMap = {
         "&": "&amp;",
         "<": "&lt;",
@@ -23,7 +23,6 @@ $(document).ready(function() {
     $popoverLink.on('click', openPopover)
     $document.on('click', closePopover)
     $('a[href^="#"]').on('click', smoothScroll)
-    buildSnippets();
   }
 
   function smoothScroll(e) {
@@ -74,20 +73,6 @@ $(document).ready(function() {
       $body.removeClass('has-docked-nav')
     }
   }
-
-  function escapeHtml(string) {
-    return String(string).replace(/[&<>"'\/]/g, function (s) {
-      return entityMap[s];
-    });
-  }
-
-  function buildSnippets() {
-    $codeSnippets.each(function() {
-      var newContent = escapeHtml($(this).html())
-      $(this).html(newContent)
-    })
-  }
-
 
   init();
 
