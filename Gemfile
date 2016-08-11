@@ -15,6 +15,7 @@ gem 'redcarpet', '~> 3.2.2'
 gem 'friendly_id', '~> 5.1.0'
 gem 'mail_form'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'will_paginate', '~> 3.1.0'
 
 group :production do
   gem 'pg'
