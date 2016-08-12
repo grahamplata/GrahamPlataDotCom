@@ -1,4 +1,10 @@
-<h2>Log in</h2>
+<!-- Bits and Pieces -->
+<%= render 'partials/header' %>
+<%= render 'partials/specialnavthree' %>
+<!-- Content -->
+<br>
+<h4>Sign In</h4>
+<h6>Admin panel</h6>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -24,3 +30,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<hr>
+<%= render 'partials/footer' %>
