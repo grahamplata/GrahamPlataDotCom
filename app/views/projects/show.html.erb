@@ -4,10 +4,10 @@
 <h4 class="docs-header"><%= @project.title %></h4> <br>
 <% if user_signed_in? %>
   <div class="admin_links">
-    <%= link_to "Edit Post", edit_post_path(@project) %>
+    <%= link_to "Edit Post", edit_project_path(@project) %>
     <%= link_to "Delete Post", project_path(@project), method: :delete, data: {confirm: "Are you sure?"} %>
   </div>
 <% end %>
-<%= @project.description %>
+<%= markdown @project.description %>
 <br>
 <br>
