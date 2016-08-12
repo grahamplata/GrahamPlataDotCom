@@ -16,6 +16,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'mail_form'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate', '~> 3.1.0'
+gem 'devise', '~> 4.2'
 
 group :production do
   gem 'pg'
