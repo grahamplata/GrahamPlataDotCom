@@ -1,13 +1,13 @@
 <nav class="navbar">
   <div class="container">
     <ul class="navbar-list">
-      <li class="navbar-item"><a class="navbar-link" href="#intro">Intro</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#blog">Blog</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#portfolio">Portfolio</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/">Intro</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/posts">Blog</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/projects">Projects</a></li>
+      <li class="navbar-item"><a class="navbar-link" href="/static_pages/portfolio">Portfolio</a></li>
       <li class="navbar-item"><a class="navbar-link" href="/contacts/new">Contact</a></li>
       <% if user_signed_in? %>
-      <li class="navbar-item navbar-link" style="align: right;"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <li class="navbar-item navbar-link" style="float: right;"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
       <% end %>
     </ul>
   </div>

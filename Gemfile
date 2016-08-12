@@ -17,6 +17,7 @@ gem 'mail_form'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise', '~> 4.2'
+gem 'twitter', '~> 5.16'
 
 group :production do
   gem 'pg'

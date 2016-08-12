@@ -1,12 +1,4 @@
-<!-- Bits and Pieces -->
-<%= render 'partials/header' %>
-<%= render 'partials/specialnav' %>
 <!-- Content -->
-
-<br>
-
-
-<h4 class="docs-header"><%= @post.title %></h4> <br>
 <br>
 <% if user_signed_in? %>
   <div class="admin_links">
@@ -14,11 +6,9 @@
     <%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
   </div>
 <% end %>
+<h4 class="docs-header"><%= @post.title %></h4> <br>
 <br>
 <%= markdown @post.content %>
 <br>
 <br>
-
 <%= render 'posts/disqus' %>
-<!-- Footers -->
-<%= render 'partials/footer' %>

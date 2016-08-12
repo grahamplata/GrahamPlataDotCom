@@ -31,12 +31,16 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <div class="container">
+    <%= render 'partials/header' %>
+    <%= render 'partials/navigation' %>
     <% if notice %>
       <p class="notice"><%= notice %></p>
     <% elsif alert %>
       <p class="alert"><%= alert %></p>
     <% end %>
     <%= yield %>
+    <!-- Footers -->
+    <%= render 'partials/footer' %>
   </div>
 
 
