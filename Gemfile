@@ -13,7 +13,7 @@ gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-r
 gem 'font-awesome-sass'
 gem 'redcarpet', '~> 3.2.2'
 gem 'friendly_id', '~> 5.1.0'
-gem 'mail_form'
+gem 'mail_form', '~> 1.5.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise', '~> 4.2'

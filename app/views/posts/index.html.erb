@@ -1,15 +1,17 @@
 <div class="docs-section" id="blog">
-<h4>Blog</h4>
-<h6>I am still buidling out the backend of my website so I am currently lacking the blog functionality. Enjoy the hint of what is to come.</h6>
+    <h4>Blog</h4>
+    <h6>I am still buidling out the backend of my website so I am currently lacking the blog functionality. Enjoy the hint of what is to come.</h6>
 
-<br>
-<% @posts.each do |post| %>
+    <br>
+    <% @posts.each do |post| %>
 
-  <h6 class="docs-header u-pull-left"><%= link_to post.title, post %></h6>
-  <p class="u-pull-right"><em><%= post.created_at.strftime("%A, %b %d") %></em></p>
-  <br>
-  <br>
-  <p><%= sanitize(post.content[0,420]) + "..." %></p>
-<% end %>
-<%= will_paginate @posts %>
+    <h4 class="docs-header u-pull-left"><%= link_to post.title, post %></h4>
+    <p class="u-pull-right">
+        <em><%= post.created_at.strftime("%A, %b %d") %></em>
+    </p>
+    <br>
+    <br>
+    <p><%= sanitize(post.content[0,420]) + "..." %></p>
+    <% end %>
+    <%= will_paginate @posts %>
 </div>

@@ -222,7 +222,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  mail_form
+  mail_form (~> 1.5.1)
   pg
   rails (= 4.2.5.1)
   rails_12factor

@@ -1,10 +1,11 @@
 <div class="docs-section" id="blog">
   <h4>Blog</h4>
-  <h6>Taming the monkey mind one post at a time.</h6>
+  <h6>Taming my monkey mind one post at a time.</h6>
   <hr>
 
   <%= @posts.each do |post| %>
     <h6 class="docs-header"><%= link_to post.title, post %></h6>
+    <hr>
     <p><%= post.created_at.strftime("%A, %b %d") %></p>
     <hr>
   <% end %>
