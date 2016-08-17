@@ -17,12 +17,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise', '~> 4.2'
 gem 'twitter', '~> 5.16'
+gem 'keen'
+gem 'mail_form'
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'informant-rails'
-  gem 'mail_form', '~> 1.5.1'
+
 end
 
 group :development, :test do
