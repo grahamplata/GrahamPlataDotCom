@@ -8,7 +8,9 @@
 <% end %>
 <h4 class="docs-header"><%= @post.title %></h4> <br>
 <br>
+<container>
 <%= markdown @post.content %>
 <br>
 <hr>
+</container>
 <%= render 'posts/disqus' %>
