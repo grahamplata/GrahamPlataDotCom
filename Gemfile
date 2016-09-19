@@ -19,6 +19,7 @@ gem 'devise', '~> 4.2'
 gem 'twitter', '~> 5.16'
 gem 'mail_form'
 
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
